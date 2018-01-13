@@ -13,3 +13,22 @@ sudo file -s /dev/xvdb
 
 sudo mkdir -p /grid/data01
 sudo mount /dev/xvdb /grid/data01
+
+
+sudo addgroup hadoop
+sudo adduser hadoop hadoop
+sudo useradd -D --base-dir /home/hadoop
+
+cd /etc/sudoers.d/
+ls
+90-cloud-init-users  README
+vi 90-cloud-init-users 
+
+more 90-cloud-init-users 
+# Created by cloud-init v. 17.1 on Sat, 13 Jan 2018 12:53:32 +0000
+
+# User rules for ubuntu
+ubuntu ALL=(ALL) NOPASSWD:ALL
+hadoop ALL=(ALL) NOPASSWD:ALL
+
+
