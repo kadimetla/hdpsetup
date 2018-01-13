@@ -11,3 +11,5 @@ sudo mkfs -t ext4 /dev/xvdb
 sudo file -s /dev/xvdb
 /dev/xvdb: Linux rev 1.0 ext4 filesystem data, UUID=c76246f3-230b-49fa-a5c8-5f39e376e34c (extents) (large files) (huge files)
 
+sudo mkdir -p /grid/data01
+sudo mount /dev/xvdb /grid/data01
